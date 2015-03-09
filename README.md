@@ -9,6 +9,8 @@ Module for playing with bitcoin in regtest mode using spock
 Prerequisites
 -------------
 - JDK 6 or higher
+- [Bitcoin Core 0.10.0](https://bitcoin.org/en/download) or higher 
+
 
 
 Creating an IDEA project
