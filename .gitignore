@@ -22,4 +22,4 @@ bin/
 *.iml
 out/
 .idea/
-data/
+data/regtest
