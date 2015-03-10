@@ -14,11 +14,11 @@ import static groovyx.net.http.Method.*
 
 class BitcoinServer {
 
-    def AtomicInteger id = new AtomicInteger()
+    AtomicInteger id = new AtomicInteger()
 
     volatile boolean serverOn = false
 
-    def http = new HTTPBuilder( 'http://bitcoinrpc:rEsu5YyCzVVfwC1Te25W1RSHEs2hD9aTpimMiFD89sD@127.0.0.1:18332/' )
+    HTTPBuilder http = new HTTPBuilder( 'http://bitcoinrpc:rEsu5YyCzVVfwC1Te25W1RSHEs2hD9aTpimMiFD89sD@127.0.0.1:18332/' )
 
     ExecutorService executor = Executors.newSingleThreadExecutor()
 
