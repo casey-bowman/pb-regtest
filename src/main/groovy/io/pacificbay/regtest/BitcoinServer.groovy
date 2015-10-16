@@ -92,12 +92,14 @@ class BitcoinServer {
      */
     def generateInitialBitcoins() {
         def blocks = post("setgenerate", [true, 101])
+        post("generate", [101])
         post("getnewaddress", [""])
         blocks
     }
 
     def confirm() {
         def block = post("setgenerate", [true])
+        post("generate", [1])
         post("getnewaddress", [""])
         block
     }
@@ -113,4 +115,6 @@ class BitcoinServer {
     String sendFrom(String account, String address, double amount) {
         post("sendfrom", [account, address, amount])
     }
+
+
 }
